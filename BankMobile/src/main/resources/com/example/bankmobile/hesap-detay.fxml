@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="875.0" prefWidth="480.0" style="-fx-background-color: e5e5e5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankmobile.HesapDetayController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="480.0" style="-fx-background-color: #007fff;" />
+      <HBox layoutX="20.0" layoutY="30.0" prefHeight="50.0" prefWidth="440.0">
+         <children>
+            <Button fx:id="geriButon" mnemonicParsing="false" onAction="#handleOncekiSayfa" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/13.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="350.0" text="Hesap Detayı          ">
+               <font>
+                  <Font name="Adelle Sans Devanagari Semibold" size="24.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <VBox layoutX="20.0" layoutY="100.0" prefHeight="450.0" prefWidth="440.0" style="-fx-background-color: white;">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: .2;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="400.0" text="     Vadesiz TL Hesabı">
+                                 <font>
+                                    <Font name="Adelle Sans Devanagari Semibold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="50.0" prefWidth="400.0">
+                                 <children>
+                                    <Label fx:id="hesapNo" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="85.0" text="(hesap no) - ">
+                                       <font>
+                                          <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="subeAdi" prefHeight="50.0" prefWidth="310.0" text="(şube adı)">
+                                       <font>
+                                          <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                                       </font></Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="200.0" text="     Kullanılabilri Bakiye">
+                                       <font>
+                                          <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                                       </font></Label>
+                                    <Label fx:id="bakiye" prefHeight="60.0" prefWidth="200.0" text="     XXX TL">
+                                       <font>
+                                          <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                                       </font></Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="200.0" text="   Kullanılabilri Kredili Bakiye">
+                                       <font>
+                                          <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="bakiye1" prefHeight="60.0" prefWidth="200.0" text="   XXX TL">
+                                       <font>
+                                          <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: e5e5e5;">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="300.0" text="Hesap Bilgileri" textFill="#666666">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: .2;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: .2;">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="400.0" text="     IBAN" textFill="#666666">
+                           <font>
+                              <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                           </font></Label>
+                        <Label fx:id="ibanBilgisi" prefHeight="50.0" prefWidth="400.0" text="     (iban bilgisi)">
+                           <font>
+                              <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: .2;">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="400.0" text="     Hesap Açılış Tarihi" textFill="#666666">
+                           <font>
+                              <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                           </font></Label>
+                        <Label fx:id="hesapAcılısTarihi" prefHeight="50.0" prefWidth="400.0" text="     (tarih)">
+                           <font>
+                              <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="20.0" layoutY="575.0" prefHeight="300.0" prefWidth="440.0" style="-fx-background-color: white;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="islemTarihi" prefHeight="100.0" prefWidth="75.0" text="işlem tarihi" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="harcamaAdi" alignment="CENTER" prefHeight="100.0" prefWidth="225.0" text="harcama adı">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="harcamaTutar" prefHeight="100.0" prefWidth="100.0" text="harcama tutarı" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="islemTarihi1" prefHeight="100.0" prefWidth="75.0" text="işlem tarihi" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="harcamaAdi1" alignment="CENTER" prefHeight="100.0" prefWidth="225.0" text="harcama adı">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="harcamaTutar1" prefHeight="100.0" prefWidth="100.0" text="harcama tutarı" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="islemTarihi2" prefHeight="100.0" prefWidth="75.0" text="işlem tarihi" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="harcamaAdi2" alignment="CENTER" prefHeight="100.0" prefWidth="225.0" text="harcama adı">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="harcamaTutar2" prefHeight="100.0" prefWidth="100.0" text="harcama tutarı" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

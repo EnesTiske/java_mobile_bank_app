@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="875.0" prefWidth="480.0" style="-fx-background-color: e5e5e5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankmobile.AnasayfaVarliklarimBorclarController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="480.0" style="-fx-background-color: #007fff;" />
+      <HBox layoutX="20.0" layoutY="100.0" prefHeight="40.0" prefWidth="440.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="varliklarLabel" alignment="CENTER" onMouseClicked="#handleVarliklarClicked" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #007whitefff;" text="Varlıklar">
+               <font>
+                  <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="borclarLabel" alignment="CENTER" onMouseClicked="#handleBorclarClicked" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #007fff;" text="Borçlar">
+               <font>
+                  <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutY="775.0" prefHeight="100.0" prefWidth="480.0">
+         <children>
+            <VBox fx:id="anaSayfaIcon" onMouseClicked="#handleAnaSayfaIconClicked" prefHeight="100.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="35.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/14.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="Ana Sayfa" />
+               </children>
+            </VBox>
+            <VBox fx:id="hesapKartIcon" onMouseClicked="#handleHesapKartIconClicked" prefHeight="100.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/15.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="Hesap/Kart" />
+               </children>
+            </VBox>
+            <VBox fx:id="islemlerIcon" onMouseClicked="#handleIslemlerIconClicked" prefHeight="100.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/16.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="İşlemler" />
+               </children>
+            </VBox>
+            <VBox fx:id="varliklarimIcon" onMouseClicked="#handleVarliklarimIconClicked" prefHeight="100.0" prefWidth="120.0" style="-fx-background-color: #007fff;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/17.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="Varlıklarım" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="25.0" prefHeight="50.0" prefWidth="440.0" text="Varlıklarım">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="20.0" layoutY="165.0" prefHeight="300.0" prefWidth="440.0" style="-fx-border-color: black; -fx-border-width: .2; -fx-background-color: white;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: .2;">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="300.0" text="     Kredi Kartı Borcu">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="krediKartiBorcu" prefHeight="100.0" prefWidth="140.0" text="xxx TL">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: .2;">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="300.0" text="     Toplam Borç">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="toplamBorc" prefHeight="100.0" prefWidth="140.0" text="xxx TL">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: .2;">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="300.0" text="     Net Borç">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="netBorc" prefHeight="100.0" prefWidth="140.0" text="xxx TL">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

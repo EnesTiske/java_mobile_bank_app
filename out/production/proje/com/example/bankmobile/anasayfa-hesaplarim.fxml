@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="875.0" prefWidth="480.0" style="-fx-background-color: #007fff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankmobile.AnasayfaHesaplarimController">
+   <children>
+      <Pane layoutY="200.0" prefHeight="675.0" prefWidth="480.0" style="-fx-background-color: e5e5e5;" />
+      <HBox fx:id="hesapBilgileriBox" layoutX="20.0" layoutY="100.0" onMouseClicked="#handleHesapBilgileriClicked" prefHeight="200.0" prefWidth="440.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0.2;">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="200.0" text="      Vadesiz TL Hesabı">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="subeAdi" alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="200.0" text="     XXX Şubesi">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="subeNo" alignment="TOP_LEFT" prefHeight="35.0" prefWidth="200.0" text="     1234 - 567890" textFill="#666666">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font></Label>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="200.0" text="     Kullanılabilir Bakiye:" textFill="#666666">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font></Label>
+                  <Label fx:id="bakiye" prefHeight="35.0" prefWidth="200.0" text="       12345 TL">
+                     <font>
+                        <Font name="Adelle Sans Devanagari Semibold" size="13.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="242.0">
+               <children>
+                  <Button fx:id="bakiyeGizleButon" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#handleBakiyeGizleClicked" style="-fx-background-color: white; -fx-background-image: /images/1.jpg;">
+                     <VBox.margin>
+                        <Insets left="140.0" top="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#handleBakiyeGizleClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children></VBox>
+         </children>
+      </HBox>
+      <Button fx:id="paraTransfer" layoutX="40.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: white;" text="Para Transfer" textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="11.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/1.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="faturaOde" layoutX="180.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: white;" text=" Fatura Öde ">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/10.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="12.0" />
+         </font></Button>
+      <Button fx:id="atmdenParaCek" layoutX="320.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: white;" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <HBox prefHeight="50.0" prefWidth="111.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../../images/11.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="100.0" text="  ATM'den">
+                           <font>
+                              <Font name="Adelle Sans Devanagari Semibold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="40.0" prefWidth="100.0" text="  Para Çek">
+                           <font>
+                              <Font name="Adelle Sans Devanagari Semibold" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </graphic></Button>
+      <VBox layoutX="20.0" layoutY="410.0" prefHeight="240.0" prefWidth="440.0" style="-fx-border-color: black; -fx-border-width: 0.2;">
+         <children>
+            <HBox prefHeight="80.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="80.0" prefWidth="320.0" style="-fx-border-color: black; -fx-border-width: 0.2; -fx-background-color: white;" text="  Son Hareketler">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="hesaplarimSonHareketlerTumunuGor" alignment="CENTER" onMouseClicked="#handleTumGorClicked" prefHeight="80.0" prefWidth="120.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 0.2;" text="Tümünü Gör &gt;" textFill="#007fff">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <Label fx:id="sonIslem1" alignment="CENTER" prefHeight="80.0" prefWidth="440.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 0.2;" text="son işlem 1">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="sonIslem2" alignment="CENTER" prefHeight="80.0" prefWidth="440.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 0.2;" text="son işlem 2">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <Label fx:id="kartlarimLabel" alignment="CENTER" layoutX="250.0" layoutY="40.0" onMouseClicked="#handleKartlarimClicked" opacity="0.75" prefHeight="35.0" prefWidth="180.0" text="Kartlarım" textFill="WHITE">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="hesaplarimLabel" alignment="CENTER" layoutX="50.0" layoutY="40.0" onMouseClicked="#handleHesaplarimClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-underline: true;" text="Hesaplarım" textFill="WHITE">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutY="775.0" prefHeight="100.0" prefWidth="480.0">
+         <children>
+            <VBox fx:id="anaSayfaIcon" onMouseClicked="#handleAnaSayfaIconClicked" prefHeight="100.0" prefWidth="120.0" style="-fx-background-color: #007fff;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="35.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/14.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="Ana Sayfa" />
+               </children>
+            </VBox>
+            <VBox fx:id="hesapKartIcon" onMouseClicked="#handleHesapKartIconClicked" prefHeight="100.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/15.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="Hesap/Kart" />
+               </children>
+            </VBox>
+            <VBox fx:id="islemlerIcon" onMouseClicked="#handleIslemlerIconClicked" prefHeight="100.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/16.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="İşlemler" />
+               </children>
+            </VBox>
+            <VBox fx:id="varliklarimIcon" onMouseClicked="#handleVarliklarimIconClicked" prefHeight="100.0" prefWidth="120.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/17.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="Varlıklarım" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>
